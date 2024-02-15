@@ -1,5 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 # Create your views here.
@@ -38,8 +37,3 @@ class ProfesorListView(ListView):
     
     
     
-    
-=======
-
-# Create your views here.
->>>>>>> master
