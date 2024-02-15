@@ -1,7 +1,30 @@
- {% extends 'profesor/base.html' %}
+{% extends 'profesor/base.html' %} {% block content %}
 
-{% block content %}
-    
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Materia</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
 
-<h1>{{profesor_data}}</h1>
+    <tbody>
+      {% for profesor in profesor_data %}
+      <tr>
+        <th scope="row">{{profesor.id}}</th>
+        <td>{{profesor.nombre}}</td>
+        <td>{{profesor.apellido}}</td>
+        <td>{{profesor.materia}}</td>
+        <td>{{profesor.correo}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
 {% endblock content %}
